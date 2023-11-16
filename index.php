@@ -1,26 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "avito_database";
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulaire d'Annonce</title>
+</head>
 
-// Connexion à la base de données
-$conn = new mysqli($servername, $username, $password);
+<body>
+    <h1>Bonjour !!Veuillez Enter Votre Produit </h1>
 
-// Vérifier la connexion
-if ($conn->connect_error) {
-    die("La connexion a échoué : " . $conn->connect_error);
-}
+    <form action="YASINE.php" method="post" enctype="multipart/form-data">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
 
-// Création de la base de données
-$sql = "CREATE DATABASE IF NOT EXISTS $dbname";
-if ($conn->query($sql) === TRUE) {
-    echo "Base de données créée avec succès";
-} else {
-    echo "Erreur lors de la création de la base de données : " . $conn->error;
-}
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required>
 
-// Fermer la connexion
-$conn->close();
-?>
+        <label for="image">Image :</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+
+        <label for="date">Date :</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="description">Description :</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <input type="submit" value="Soumettre">
+    </form>
+
+</body>
+
+</html>
