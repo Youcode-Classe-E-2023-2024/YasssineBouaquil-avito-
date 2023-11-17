@@ -1,11 +1,12 @@
 <!DOCTYPE html>
     <html>
-		<link rel="stylsheet" href="style.css">
+		<link rel="stylesheet" href="style.css">
     <head>
     <title>Basic MySQLi Commands</title>
     </head>
     <body>
     	<div>
+			<h1>Formulaire de Produits !!</h1>
     		<form method="POST" action="add.php">
     			<label>fullname:</label><input type="text" name="fullname">
     			<label>phone number:</label><input type="number" name="phonenum">
