@@ -11,7 +11,7 @@
     			<label>fullname:</label><input type="text" name="fullname">
     			<label>phone number:</label><input type="number" name="phonenum">
     			<label>Prix:</label><input type="number" name="prix">
-    			<label>discreption:</label><input type="text" name="disc">
+    			<label>description:</label><input type="text" name="disc">
     			<input type="submit" name="add">
     		</form>
     	</div>
@@ -19,9 +19,10 @@
     	<div>
     		<table border="1">
     			<thead>
-    				<th>Firstname</th>
-    				<th>Lastname</th>
-    				<th></th>
+    				<th>FullName</th>
+    				<th>Phone Number</th>
+    				<th>Prix</th>
+					<th>Description</th>
     			</thead>
     			<tbody>
     				<?php
@@ -31,9 +32,9 @@
     						?>
     						<tr>
     							<td><?php echo $row['fullname']; ?></td>
-    							<td><?php echo $row['phonenum']; ?></td>	
+    							<td><?php echo $row['disc']; ?></td>	
     							<td><?php echo $row['prix']; ?></td>
-    							<td><?php echo $row['disc']; ?></td>
+    							<td><?php echo $row['phonenum']; ?></td>
     							<td>
     								<a href="edit.php?id=<?php echo $row['userid']; ?>">Edit</a>
     								<a href="delete.php?id=<?php echo $row['userid']; ?>">Delete</a>
